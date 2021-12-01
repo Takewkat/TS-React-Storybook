@@ -1,0 +1,38 @@
+:root{
+    --input-list-border: rgb(247, 243, 243);
+    --input-list-color: rgb(248, 16, 190);
+    --input-list-accent: rgb(43, 243, 70);
+    --input-list-font-size: 18px;
+}
+.input-list--mode_success {
+    --input-list-border: rgb(71, 83, 15);
+    --input-list-color: rgb(9, 58, 30);
+    --input-list-accent: rgb(10, 10, 10);
+    --input-list-font-size: 28px;
+}
+
+
+.input-list {
+    color: rgb(247, 121, 63);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-list-border);
+}
+.input-list--is-active_true {
+    border-color: green;
+}
+.input-list--is-active_true .input-list__title{
+    color: var(--input-list-accent);
+    font-weight: 900;
+}
+.input-list + .input-list {
+    margin-top: 8px;
+}
+.input-list__title {
+    border-color: var(--input-list-color);
+}
+.input-list__icon {
+    font-size: var(--input-list-font-size);
+}
+
