@@ -7,9 +7,9 @@ const defaultState = {
     data: '',
 }
 const MySharedContext = React.createContext(defaultState);
-//создаем контекст
+//create context
 export const useMyContext = () => useContext(MySharedContext);
-//Провайдер говорит - подписывайся на меня, я хранилище, я раздаю events
+//The provider says - subscribe to me, I am the repository, I distribute events
 export const MyContextProvider = ({children}: {children: any}) => {
     const [state, setState] = useState<string>('default');
 
@@ -19,7 +19,7 @@ export const MyContextProvider = ({children}: {children: any}) => {
             data: state,
         };
     }, [state, setState]);
-    //замкнули логику, чтобы рендер постоянно не множил объекты
+    //closed the logic so that the render does not constantly multiply objects
     return <MySharedContext.Provider value={value}>
         {children}
     </MySharedContext.Provider>
@@ -29,7 +29,7 @@ export const MyContextProvider = ({children}: {children: any}) => {
 const InputEmmiter = () => {
     const {setData, data} = useMyContext();
     const onClick = () => setData('CLICK' + Date.now().toString());
-/* Расширение логики
+/* extension of logic
     useEffect(() => {
         setData(ref);
         () => clearData(ref);
