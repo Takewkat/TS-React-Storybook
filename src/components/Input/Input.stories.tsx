@@ -11,17 +11,17 @@ export const ExampleInput = () => {
         <>
         <MyContextProvider>
             <InputList 
-                title='HELOOOOO DUDE' 
+                title='HELOOOOO' 
                 isActive={true}
                 icon={'💡'} />       
         
             <InputList 
-                title='HELOOOOO BOY' 
+                title='HEYYYYY' 
                 isActive={false}
                 icon={'👇'} />        
         
             <InputList 
-                title='HELOOOOO MAN' 
+                title='HI' 
                 isActive
                 mode='success'
                 icon={'✍️'} />
